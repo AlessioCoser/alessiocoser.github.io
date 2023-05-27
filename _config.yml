@@ -1,7 +1,4 @@
-title: "Alessio Coser"
-# logo: "/docs/images/logo_with_text.svg"
+title: Alessio Coser
+source: docs
 remote_theme: alshedivat/al-folio
-# aux_links:
-#   "Daikon on GitHub":
-#     - "//github.com/DaikonWeb/daikon"
-footer_content: "An eXtreme Programmer"
+footer_content: An eXtreme Programmer
