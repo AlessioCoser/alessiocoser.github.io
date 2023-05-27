@@ -1,4 +1,6 @@
 title: Alessio Coser
 source: docs
-remote_theme: alshedivat/al-folio
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 footer_content: An eXtreme Programmer
+plugins:
+  - jekyll-include-cache
