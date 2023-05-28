@@ -26,17 +26,16 @@ authors:
   alessio:
     name: Alessio Coser
     display_name: Alessio Coser
-    avatar: 'assets/images/sal.png'
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net/category/jekyll-themes/
-    twitter: https://twitter.com/wowthemesnet
-    description: "Author of Affiliates, a template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
+    avatar: 'assets/images/alessio.png'
+    email: unexistent@ema.il
+    web: https://www.alessiocoser.com/
+    twitter: https://twitter.com/AlessioCoser
+    description: "An eXtreme Programmer. I strive at continuously improving my knowledge, by studying practices, languages, methodologies and applying what I learn to my everyday work. I strongly believe in teamwork and in the fact that the team should be autonomous and responsible during the whole life-cycle of a product or a service, from its development to its release and to software maintenance."
 
 # Social
 social:
-  instagram: https://www.instagram.com/bootstrapstarter/
-  facebook: https://www.facebook.com/bootstrapstartercom-346329609045284
-  twitter: https://twitter.com/bstartercom
+  linkedin: https://linkedin.com/in/AlessioCoser
+  twitter: https://twitter.com/AlessioCoser
 
 # Plugins
 plugins:
