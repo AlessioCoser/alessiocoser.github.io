@@ -84,36 +84,11 @@ gtag('config', '{{site.ganalytics}}');
       </nav>
     </div>
 
+{% include banner.html %}
 
 <!-- Container
 ================================================== -->
 <main class="container">
-    {% if page.banner %}
-      <div class="rounded mb-5 hero" style="background-color: {{page.banner.color}};">
-        <div class="row align-items-center justify-content-between">
-          {% if page.banner.image %}
-            <div class="col-md-6">
-          {% else %}
-            <div class="col-md-12">
-          {% endif %}
-            {% if page.banner.title %}
-              <h1 class="font-weight-bold mb-4 serif-font">{{page.banner.title}}</h1>
-            {% endif %}
-            {% if page.banner.description %}
-              <p class="lead mb-4">{{page.banner.description}}</p>
-            {% endif %}
-            {% if page.banner.button.link and page.banner.button.text %}
-              <a href="{{site.baseurl}}{{page.banner.button.link}}" class="btn btn-dark text-white px-5 btn-lg">{{page.banner.button.text}}</a>
-            {% endif %}
-          </div>
-          {% if page.banner.image %}
-            <div class="col-md-6 text-right pl-0 pl-lg-4">
-              <img class="intro" height="500" src="{{site.baseurl}}{{page.banner.image}}">
-            </div>
-          {% endif %}
-        </div>
-      </div>
-    {% endif %}
       {{ content }}
 </main>
 

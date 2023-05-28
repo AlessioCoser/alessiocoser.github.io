@@ -137,6 +137,9 @@ small, .small {
 .hero {
     padding: 5rem 5rem;
 }
+.hero.hero-full {
+  padding: 5rem 0;
+}
 .hero h1 {
   font-size:2.5em;
 }
@@ -157,6 +160,9 @@ small, .small {
     .hero {
       padding: 4rem 4rem;
     }
+    .hero.hero-full {
+      padding: 4rem 0;
+    }
     .hero h1 {
       font-size:2em;
     }
@@ -167,6 +173,9 @@ small, .small {
     }
     .hero {
       padding: 2rem 2rem;
+    }
+    .hero.hero-full {
+      padding: 2rem 0;
     }
     .hero h1 {
       font-size:1.5em;
