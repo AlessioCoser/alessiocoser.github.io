@@ -135,8 +135,10 @@ small, .small {
 /* Pages
 ================================================== */
 .hero {
-    background: #fdd93d;
     padding: 5rem 5rem;
+}
+.hero h1 {
+  font-size:2.5em;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -152,10 +154,22 @@ small, .small {
     .layout-default .wrap-page-header {
         display:block;
     }
+    .hero {
+      padding: 4rem 4rem;
+    }
+    .hero h1 {
+      font-size:2em;
+    }
 }
 @media only screen and (max-width: 767px) {
     .page-header.big {
         font-size:2.5em;
+    }
+    .hero {
+      padding: 2rem 2rem;
+    }
+    .hero h1 {
+      font-size:1.5em;
     }
 }
 .google-auto-placed {
@@ -165,9 +179,6 @@ small, .small {
     display:none;
 }
 
-.hero h1 {
-    font-size:2.5em;
-}
 .section-title h2 {
 	font-weight:700;
 	font-size:1.4rem;

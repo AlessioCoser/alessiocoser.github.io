@@ -102,7 +102,7 @@ gtag('config', '{{site.ganalytics}}');
             {% if page.banner.description %}
               <p class="lead mb-4">{{page.banner.description}}</p>
             {% endif %}
-            {% if page.banner.button.link && page.banner.button.text %}
+            {% if page.banner.button.link and page.banner.button.text %}
               <a href="{{site.baseurl}}{{page.banner.button.link}}" class="btn btn-dark text-white px-5 btn-lg">{{page.banner.button.text}}</a>
             {% endif %}
           </div>
