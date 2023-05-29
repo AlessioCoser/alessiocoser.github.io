@@ -1,5 +1,5 @@
-title: "Affiliates"
-email: wowthemesnet@gmail.com
+title: "Alessio Coser - eXtreme Programmer"
+email: unexistent@ema.il
 timezone: UTC
 baseurl: ""
 permalink: "/:title/"
@@ -19,9 +19,6 @@ kramdown:
 sass:
   sass_dir: _sass
   style: :compressed
-# ganalytics:
-
-# Authors
 authors:
   alessio:
     name: Alessio Coser
@@ -31,13 +28,9 @@ authors:
     web: https://www.alessiocoser.com/
     twitter: https://twitter.com/AlessioCoser
     description: "I'm a passionate advocate of eXtreme Programming. I'm a curious guy, I really enjoy learning and trying new things."
-
-# Social
 social:
   linkedin: https://linkedin.com/in/AlessioCoser
   twitter: https://twitter.com/AlessioCoser
-
-# Plugins
 plugins:
 - jekyll-paginate
 - jekyll-sitemap
