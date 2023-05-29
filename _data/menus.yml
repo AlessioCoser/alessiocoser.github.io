@@ -21,12 +21,12 @@ footermenu:
 - title: Home
   url: ""
 
-- title: Privacy Policy
-  url: "privacy-policy/"
+- title: About
+  url: "about/"
 
 - title: Contact
   url: "contact/"
 
-- title: Download
-  url: https://bootstrapstarter.com/template-affiliates-bootstrap-jekyll/
+- title: My GitHub
+  url: https://github.com/AlessioCoser/
   external: true
