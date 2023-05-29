@@ -16,14 +16,7 @@
 <!-- custom CSS end-->
 
 {% if jekyll.environment == "production" %}
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{site.ganalytics}}"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', '{{site.ganalytics}}');
-</script>
+<!-- plaisible analytics here -->
 {% endif %}
 
 </head>
@@ -48,8 +41,6 @@ gtag('config', '{{site.ganalytics}}');
 
 
           <div class="d-flex align-items-center">
-
-            <span class="ml-3 text-muted small">Reach me on</span>
 
             <a class="d-inline-block social-icon" target="_blank" href="{{site.social.twitter}}">
               <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
