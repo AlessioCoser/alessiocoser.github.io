@@ -1,6 +1,10 @@
-/* 
-Don't want to use sass and simply modify the stylesheet in the old css fashion? 
+/*
+Don't want to use sass and simply modify the stylesheet in the old css fashion?
 Just customize your theme here.
 ================================================== */
 
 body {}
+
+.highlight {
+  padding: 0.5rem 1rem;
+}
