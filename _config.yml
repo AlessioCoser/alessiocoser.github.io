@@ -29,6 +29,10 @@ authors:
     twitter: https://twitter.com/AlessioCoser
     linkedin: https://linkedin.com/in/AlessioCoser
     description: "I'm a passionate advocate of eXtreme Programming. I'm a curious guy, I really enjoy learning and trying new things."
+exclude:
+  - "LICENSE.txt"
+  - "CNAME"
+  - "vendor"
 plugins:
 - jekyll-paginate
 - jekyll-sitemap
