@@ -27,10 +27,8 @@ authors:
     email: unexistent@ema.il
     web: https://www.alessiocoser.com/
     twitter: https://twitter.com/AlessioCoser
+    linkedin: https://linkedin.com/in/AlessioCoser
     description: "I'm a passionate advocate of eXtreme Programming. I'm a curious guy, I really enjoy learning and trying new things."
-social:
-  linkedin: https://linkedin.com/in/AlessioCoser
-  twitter: https://twitter.com/AlessioCoser
 plugins:
 - jekyll-paginate
 - jekyll-sitemap
