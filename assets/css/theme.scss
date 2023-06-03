@@ -514,7 +514,7 @@ background-color: #fff;
     position: absolute;
     z-index: 1;
     left: 0px;
-    top: 15px;
+    top: 20px;
     width: 100%;
     height: 1px;
     content: '';
@@ -533,17 +533,17 @@ background-color: #fff;
     box-shadow:0 0px 1px 0 rgba(0, 0, 0, 0.44);
     padding: 30px;
 }
-.sidebar #mc_embed_signup form {
+.sidebar #myself form {
     padding: 0 !important;
 }
-.sidebar #mc_embed_signup .button {
+.sidebar #myself .button {
     width: 100% !important;
     background: #3d61fd !important;
     height: auto;
     padding: 6px 20px;
     font-weight: 600;
 }
-.sidebar #mc_embed_signup h2 {
+.sidebar #myself h2 {
     font-weight: 400;
     font-size: 15px;
     color: #999;
@@ -551,11 +551,33 @@ background-color: #fff;
     line-height: 1.5;
     text-align: center;
 }
-.sidebar #mc_embed_signup input {width:100%;}
-.sidebar #mc_embed_signup .mc-field-group {width:100% !important;}
-#mc_embed_signup .mc-field-group input {text-indent: 5% !important;}
-#mc_embed_signup {font-family:inherit !important;}
+.sidebar #myself input {width:100%;}
+.sidebar #myself .mc-field-group {width:100% !important;}
+#myself .mc-field-group input {text-indent: 5% !important;}
+#myself {font-family:inherit !important;}
 .sidebar-right .sidebar {max-width:inherit;}
+
+#myself .button {
+  clear: both;
+  background-color: #aaa;
+  border: 0 none;
+  border-radius: 4px;
+  transition: all 0.23s ease-in-out 0s;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: normal;
+  height: 32px;
+  line-height: 32px;
+  margin: 0 5px 10px 0;
+  padding: 0 22px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: auto;
+}
 
 .article-post .h1, .article-post .h2, .article-post .h3, .article-post .h4, .article-post .h5, .article-post .h6, .article-post h1, .article-post h2, .article-post h3, .article-post h4, .article-post h5, .article-post h6 {
     font-weight: 600;

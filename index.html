@@ -2,15 +2,6 @@
 title: Home
 layout: default
 background: '/img/bg-index.jpg'
-banner:
-  full: false
-  color: "#fdd93d"
-  image: /assets/images/intro.svg
-  button:
-    text: About me
-    link: /about
-  title: Hey there! I'm Alessio
-  description: I'm a passionate advocate of eXtreme Programming. I'm a curious guy, I really enjoy learning and trying new things.
 ---
 
 <!-- Featured
@@ -30,6 +21,7 @@ banner:
 ================================================== -->
 <section class="row">
   <div class="col-sm-8">
+    <h1 class="mb-4">My Posts</h1>
     <div class="row">
       {% for post in paginator.posts %}
       {% unless post.featured == true %}

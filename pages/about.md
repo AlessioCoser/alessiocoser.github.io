@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: "/about/"
-image: assets/images/1.jpg
+image: assets/images/2.jpg
 ---
 
 This website is a demonstration to see **Affiliates Jekyll theme** in action.
