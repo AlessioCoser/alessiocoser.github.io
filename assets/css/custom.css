@@ -8,3 +8,12 @@ body {}
 .highlight > pre {
   padding: 0.5rem 1rem;
 }
+
+.sidebar .category {
+  width: auto;
+  display: inline-block;
+  margin: 5px;
+  padding: 2px 10px;
+  background: #e1e1e1;
+  border-radius: 4px;
+}
