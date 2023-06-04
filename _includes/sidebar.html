@@ -2,10 +2,4 @@
     <div class="sidebar-section">
         {% include myself.html %}
     </div>
-    <div class="sidebar-section">
-      <h5><span>Categories</span></h5>
-      {% for category in site.categories %}
-        <a class="category" href="{{ site.baseurl }}/categories/{{ category[0] | slugify }}">{{ category[0] }}</a>
-      {% endfor %}
-    </div>
 </div>

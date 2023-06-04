@@ -19,18 +19,6 @@ post_class: post-template
 			<!-- End Featured Image -->
 			<div class="mainheading">
 
-                <!-- Post Categories -->
-                <div class="after-post-tags">
-                    <ul class="tags">
-                        {% assign sortedCategories = page.categories | sort %}
-                        {% for category in sortedCategories %}
-                        <li>
-                         <a href="{{ site.baseurl }}/categories/{{ category | slugify }}">{{ category }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <!-- End Categories -->
 
                 <!-- Post Title -->
 				<h1 class="posttitle">{{ page.title }}</h1>
