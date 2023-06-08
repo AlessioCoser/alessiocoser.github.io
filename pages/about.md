@@ -12,9 +12,9 @@ I have been lucky to have been part of several **cross-functional** teams adopti
 
 Through these experiences I have learned so much.
 
-Just to name a few things I became aware of what **true teamwork** really means: continuous collaboration, sharing, review and feedback through **pair programming**, retrospectives, study together or book clubs.
+Just to name a few things, I became aware of what **true teamwork** really means: continuous collaboration, sharing, review and feedback through **pair programming**, retrospectives, common study or book clubs.
 
 I discovered the effectiveness of **codebase quality** to keep the cost of change constant over time by adopting practices such as **TDD/ATDD**, simple design, hexagonal architecture, **continuous integration**.
 
-I realized that keeping things **simple is not easy** at all, both on the codebase and in the business processes, but if you are able keep things simple everyone will benefit with less stress, fewer context switches, more clarity and more focus.
+I realized that keeping things **simple is not easy** at all, both on the codebase and in the business processes, but if you are able to keep things simple everyone will benefit from that with less stress, fewer context switches, more clarity and more focus.
 
