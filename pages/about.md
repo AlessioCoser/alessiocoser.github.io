@@ -5,11 +5,16 @@ permalink: "/about/"
 image: assets/images/2.jpg
 ---
 
-This website is a demonstration to see **Affiliates Jekyll theme** in action.
+I am a _software crafter_ and a passionate advocate of [eXtreme Programming](http://www.extremeprogramming.org/).
+I aim to continuously learn better ways to deliver working software faster.
 
-The theme is compatible with Github pages. This demo is created with Github Pages and hosted with Github.
+I have been lucky to have been part of several **cross-functional** teams adopting **eXtreme Programming**. These teams were quite **autonomous** and **responsible** for the entire life cycle of a product or service.
 
-Everything is ready for your quick setup: Blog, Categories, About, Privacy Policy, Terms of Use, Contact form, Mailchimp
+Through these experiences I have learned so much.
 
-[Get it here](https://bootstrapstarter.com/jekyll-theme-memoirs/)
+Just to name a few things I became aware of what **true teamwork** really means: continuous collaboration, sharing, review and feedback through **pair programming**, retrospectives, study together or book clubs.
+
+I discovered the effectiveness of **codebase quality** to keep the cost of change constant over time by adopting practices such as **TDD/ATDD**, simple design, hexagonal architecture, **continuous integration**.
+
+I realized that keeping things **simple is not easy** at all, both on the codebase and in the business processes, but if you are able keep things simple everyone will benefit with less stress, fewer context switches, more clarity and more focus.
 
