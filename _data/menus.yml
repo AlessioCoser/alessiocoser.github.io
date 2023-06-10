@@ -21,8 +21,8 @@ footermenu:
 - title: Home
   url: ""
 
-- title: About
-  url: "about/"
+- title: About me
+  url: "about-me/"
 
 - title: Contact
   url: "contact/"
