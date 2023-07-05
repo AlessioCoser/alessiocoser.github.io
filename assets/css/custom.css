@@ -17,3 +17,8 @@ body {}
   background: #e1e1e1;
   border-radius: 4px;
 }
+
+.IN-widget {
+  vertical-align: middle !important;
+  padding-bottom: 3px !important;
+}
