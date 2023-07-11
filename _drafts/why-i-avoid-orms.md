@@ -37,7 +37,7 @@ The given task is to write a program that loads a set of employee records from a
 
 In particular I want to focus on the database communication part.
 
-For that part I would use a repository pattern (or Facade-Adapter combo) so I can abstract away the implementation details from my domain logic.
+As suggested by the article linked above, for that part I would use a repository pattern (or Facade-Adapter combo) so I can abstract away the implementation details from my domain logic.
 
 #### An ORM implementation
 If I use an ORM like SpringBoot JPA I can have a code like this (unfortunately I cannot skip the implementation details completely here):
