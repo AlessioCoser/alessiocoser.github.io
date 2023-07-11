@@ -40,7 +40,7 @@ In particular I want to focus on the database communication part.
 As suggested by the article linked above, for that part I would use a repository pattern (or Facade-Adapter combo) so I can abstract away the implementation details from my domain logic.
 
 #### An ORM implementation
-Implementing the Repository pattern seems easy with SpringBoot JPA. I only need to implement the `JpaRepository` interface (unfortunately I cannot skip the implementation details completely here):
+Implementing the Repository pattern seems easy with SpringBoot JPA. I only need to implement the `JpaRepository` interface:
 ```kotlin
 @Entity
 data class Employee (
@@ -63,7 +63,7 @@ interface EmployeeRepository: JpaRepository<Employee, Long> {
 ```
 
 #### What's wrong here?
-In the JPA implementation, I see two main problems:
+I see two main problems:
 1. **The Employee class should belong to the domain**. But it has the details of the database implementation and we shouldn't know where it comes from.
    - has an id (also if I don't need it)
    - is annotated as `@Entity`
