@@ -40,7 +40,7 @@ In particular I want to focus on the database communication part.
 As suggested by the article linked above, for that part I would use a repository pattern (or Facade-Adapter combo) so I can abstract away the implementation details from my domain logic.
 
 #### An ORM implementation
-If I use an ORM like SpringBoot JPA I can have a code like this (unfortunately I cannot skip the implementation details completely here):
+Implementing the Repository pattern seems easy with SpringBoot JPA. I only need to implement the `JpaRepository` interface (unfortunately I cannot skip the implementation details completely here):
 ```kotlin
 @Entity
 data class Employee (
