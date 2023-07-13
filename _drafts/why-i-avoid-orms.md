@@ -118,7 +118,7 @@ Mapping could be a boring thing, but, maybe, you feel this way because you are u
 
 The mapping logic could be very specific and different case per case, so that logic should not be generalized by an ORM, it is better to keep that part very specific, clear, and as straightforward as possible.
 
-So I wouldn't try to abstract the mapping away, I would rather focus on other parts instead:
+So I wouldn't try to abstract the mapping away, I would rather focus on other parts:
 - managing the database connection, transactions, and configuration
 - building SQL queries with parameters and keeping them easy to read and maintain.
 
