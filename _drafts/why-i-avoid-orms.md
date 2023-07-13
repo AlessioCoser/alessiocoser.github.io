@@ -73,8 +73,8 @@ I see two main problems:
    - it doesn't return a domain's object (Employee it's an ORM entity)
    - it extends a specific JPARepository interface
 
-#### A plain implementation (No-ORM)
-Without ORMs, I would write a code like this (I skipped the repository implementation here because it doesn't matter for the example):
+#### A plain implementation without ORM
+I skipped the repository implementation here because it doesn't matter for the example:
 ```kotlin
 data class Employee(
     val firstName: String,
@@ -116,7 +116,7 @@ The way we structure our domain objects should not necessarily reflect the way w
 
 Mapping could be a boring thing, but, maybe, you feel this way because you are using an ORM. In my experience, without it, the mapping isn’t that boring because the objects in my domain aren’t the same as the tables in the database, they also can, and should, have behavior inside.
 
-The mapping logic could be very specific and different case per case, so that logic should not be generalized by an ORM, it is better to keep that part very specific, clear, and as straightforward as possible.
+The mapping logic could be very specific and different from case to case, so this logic should not be generalized by an ORM. I prefer to keep that part very specific, clear, and as straightforward as possible.
 
 So I wouldn't try to abstract the mapping away, I would rather focus on other parts:
 - managing the database connection, transactions, and configuration
