@@ -31,11 +31,11 @@ Last but not least, I can also test these adapters with really specific integrat
 ### A bit of code
 I will take the [birthday greeting kata](http://matteo.vaccari.name/blog/archives/154.html) as an example.
 
-The purpose of this kata is to learn about the hexagonal architecture, and how to shield your domain model from external APIs and systems.
+The purpose of this kata is to learn about the hexagonal architecture, and how to **shield your domain model from external APIs and systems**.
 
 The given task is to write a program that loads a set of employee records from a flat file and then sends a greetings email to all employees whose birthday is today.
 
-In particular I want to focus on the database communication part.
+In particular I want to focus on the **database communication** part.
 
 As suggested by the article linked above, for that part I would use a repository pattern (or Facade-Adapter combo) so I can abstract away the implementation details from my domain logic.
 
@@ -108,25 +108,27 @@ Eventually, you will have to test the code. This entanglement of domain and tech
 
 ## What are ORMs abstracting?
 
-The ORMs force you to map tables into objects, to use their custom language to interact with the database, and to define an object-oriented representation of the database tables. Is this necessary? Is this useful? Is this really worth it?
+The ORMs force you to map tables into objects, to use their custom language to interact with the database, and to define an object-oriented representation of the database tables. **Is this necessary? Is this useful? Is this really worth it?**
 
 We already have a great language for interacting with relational databases. It is called SQL.
 
-The way we structure our domain objects should not necessarily reflect the way we want to store the data (i.e. Event Sourcing). So it's better to have more domain-aligned abstractions and then put the SQL queries in a Repository along with the mapping of the domain's object.
+It's better to have **domain-aligned abstractions** and put the SQL queries in a Repository along with an _"intelligent"_ mapping to translate database entities to a domain object. This is due to the way we structure our domain objects that should not reflect the way we want to store the data, but the way we want the system behave.
 
-Mapping could be a boring thing, but, maybe, you feel this way because you are using an ORM. In my experience, without it, the mapping isn’t that boring because the objects in my domain aren’t the same as the tables in the database, they also can, and should, have behavior inside.
+<center>I prefer to keep the mapping logic very specific, clear, and as straightforward as possible.</center>
 
-The mapping logic could be very specific and different from case to case, so this logic should not be generalized by an ORM. I prefer to keep that part very specific, clear, and as straightforward as possible.
+The mapping logic could be very specific and different from case to case, so this logic should not be generalized by an ORM, but should be handled by us.
 
-So I wouldn't try to abstract the mapping away, I would rather focus on other parts:
-- managing the database connection, transactions, and configuration
-- building SQL queries with parameters and keeping them easy to read and maintain.
+So, for a library that aims to simplify the database communication, I wouldn't do what ORMs do, I would rather focus on other parts:
+- managing the database **connection**, **transactions**, and **configuration**
+- building **SQL queries** with parameters and keeping them easy to read and maintain.
+
+I would then leave it up to the user to compose the parts as needed.
 
 ## There aren't only ORMs
 
 There are also query builders or database connection abstractions that are simpler and less _"magic"_, you don't have to make objects and relations to fit in tables and relations: you only build a query, execute it, and then you can map the result as you wish.
 
-I played a bit on this concept by creating a Kotlin library that I called [JAKO (Just Another Kotlin ORM)](https://github.com/AlessioCoser/jako). It isn't really an ORM, since it doesn't deal with objects and relations, but it helps me to configure the database connection, to execute SQL instructions, and to map them into our domain objects with a fluent syntax.
+I played a bit on this concept by creating a **Kotlin library** that I called [JAKO (Just Another Kotlin ORM)](https://github.com/AlessioCoser/jako). It isn't really an ORM, since it doesn't deal with objects and relations, but it helps me to configure the database connection, to execute SQL instructions, and to map them into our domain objects with a fluent syntax.
 
 It started when I was working as a consultant and since then has grown iteratively and incrementally driven by my usage needs.
 
@@ -140,7 +142,7 @@ val tableIds: List<Int> = db
 
 If you see the code above there is a question mark on the query to apply safely the value that is put in the second parameter. Easy peasy.
 
-I wanted to go further, so on top of that, I played a bit with the Kotlin DSL to build a SQL builder in order to keep together the SQL instructions and their corresponding values.
+I wanted to go further, so on top of that, I played a bit with the **Kotlin DSL** to build a **SQL builder** in order to keep together the SQL instructions and their corresponding values.
 
 The same query as above could have been written in this way:
 ```kotlin
@@ -158,7 +160,7 @@ val tableIds: List<Int> = db
 
 You can also print the statement as SQL with params to see how exactly is traduced.
 
-Note that the same methods (`toSQL()` and `params()`) are also used by the library to run the statement.
+**Note** that the same methods (`toSQL()` and `params()`) are also used by the library to run the statement.
 ```kotlin
 println(query.toSQL(Dialect.All.MYSQL))
 // SELECT `id` FROM `users` WHERE `city` = ?
@@ -168,7 +170,7 @@ println(query.params())
 
 The good thing is that there is no _"magic"_ around objects involved: you are only building an SQL statement. The library only wraps the tables and the fields with the dialect-specific separator.
 
-So you will continue to use SQL.
+**So you will continue to use SQL.**
 
 Another important thing to note is the way you map the result of the query:
 `.all { int("id") }` with this instruction I want all the results I queried and I want only their ids mapped as integers.
@@ -176,7 +178,7 @@ Another important thing to note is the way you map the result of the query:
 If I want to retrieve only the first record I can use this one:
 `.first { int("id") }`.
 
-And what about a more complex object like an Employee? Here you are a simple implementation of the EmployeeRepository of the example above:
+And what about a more complex object like an `Employee`? Here you are a simple implementation of the `EmployeeRepository` of the example above:
 ```kotlin
 class MysqlEmployeeRepository(private val db: Database) : EmployeeRepository {
     override fun findEmployeesBornOn(month: Int, day: Int): List<Employee> {
