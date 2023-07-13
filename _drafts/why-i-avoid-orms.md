@@ -112,7 +112,7 @@ The ORMs force you to map tables into objects, to use their custom language to i
 
 We already have a great language for interacting with relational databases. It is called SQL.
 
-The way we structure our domain objects should not necessarily reflect the way we want to store the data (i.e. Event Sourcing).
+The way we structure our domain objects should not necessarily reflect the way we want to store the data (i.e. Event Sourcing). So it's better to have more domain-aligned abstractions and then put the SQL queries in a Repository along with the mapping of the domain's object.
 
 Mapping could be a boring thing, but, maybe, you feel this way because you are using an ORM. In my experience, without it, the mapping isn’t that boring because the objects in my domain aren’t the same as the tables in the database, they also can, and should, have behavior inside.
 
