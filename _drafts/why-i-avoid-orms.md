@@ -108,16 +108,17 @@ Eventually, you will have to test the code. This entanglement of domain and tech
 
 ## What are ORMs abstracting?
 
-It seems to me that ORMs are trying to simplify the easy part: mapping tables to objects in the code.
-The proposed solution is to have a custom language to interact with the database along with an object-oriented representation of the database tables. Is this necessary? Is this useful? Is this really worth it?
+The ORMs force you to map tables into objects, to use their custom language to interact with the database, and to define an object-oriented representation of the database tables. Is this necessary? Is this useful? Is this really worth it?
 
 We already have a great language for interacting with relational databases. It is called SQL.
 
-Why don't we use the repository pattern to have more domain-aligned abstractions and then put the SQL queries there along with the mapping of the domain's object?
+The way we structure our domain objects should not necessarily reflect the way we want to store the data (i.e. Event Sourcing).
 
-In my opinion, ORMs are used to simplify the wrong thing: mapping tables to objects.
-Yes, it's a boring thing, but also extremely straightforward to read and reason about.
-So I wouldn't try to abstract that away, I would rather focus on other parts:
+Mapping could be a boring thing, but, maybe, you feel this way because you are using an ORM. In my experience, without it, the mapping isn’t that boring because the objects in my domain aren’t the same as the tables in the database, they also can, and should, have behavior inside.
+
+The mapping logic could be very specific and different case per case, so that logic should not be generalized by an ORM, it is better to keep that part very specific, clear, and as straightforward as possible.
+
+So I wouldn't try to abstract the mapping away, I would rather focus on other parts instead:
 - managing the database connection, transactions, and configuration
 - building SQL queries with parameters and keeping them easy to read and maintain.
 
