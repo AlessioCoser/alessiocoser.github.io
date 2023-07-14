@@ -103,7 +103,7 @@ Anyway, this can be the way to go if you feel the need to keep using ORMs. I use
 
 Unfortunately, I experienced the worst-case scenario much more often than the best one.
 
-This can lead to a _mass of obscure code_ that will make it difficult to know the real side effects because the real dependencies between entities are obfuscated by the ORM's mechanics.
+This can lead to an _obscure code mass_ that will make it difficult to know the real side effects because the real dependencies between entities are obfuscated by the ORM's mechanics.
 
 Eventually, you will have to test the code. This entanglement of domain and technical details makes it really difficult to test it in isolation. Your tests will start to feel weird and slow, and you will need an h2 or similar tools just to be able to verify the core business logic.
 
