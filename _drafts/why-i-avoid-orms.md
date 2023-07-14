@@ -22,7 +22,7 @@ I will go into the details of these approaches in another post. For now, the imp
 
 To do so, of course, I have to map objects that belong to the external world into domain objects and vice-versa. It's a tiny cost that I'm usually more than happy to pay.
 
-Having the domain logic independent helps me to easily test all the core domain logic and [to mock only the adapters](https://medium.com/@xpmatteo/how-i-learned-to-love-mocks-1-fb341b71328) that abstract away the details of the external world.
+Having the domain logic independent helps me to easily test all the core domain logic using [mocks of the adapters](https://medium.com/@xpmatteo/how-i-learned-to-love-mocks-1-fb341b71328) that abstract away the details of the external world.
 
 Moreover, it is possible to communicate with these adapters using the **domain's language and ignoring all the technical details**.
 
