@@ -92,11 +92,12 @@ interface EmployeeRepository {
 The implementation of EmployeeRepository will have all the things needed to satisfy the `findEmployeesBornOn` method call. It could be a database connection or an API request. I just don't care from the domain's perspective.
 
 #### Considerations
-If you want to use an ORM and preserve the domain-infrastructure separation, you still have to do a mapping from a DB entity to a domain object.
 
-**This is the best-case scenario, where you will end up having an abstraction of another abstraction.** So, probably, an unneeded complexity.
+**In the best-case scenario, you use an ORM only inside the repository's implementation and map the ORM Entities into the domain objects.** This lets you preserve the domain-infrastructure separation.
 
-In that case, you will need a double mapping: one handled _auto-magically_ by the ORM that converts the retrieved SQL records into the Database Entity and another, that you have to deal with, that converts the Database Entity into your domain class.
+In this case, you are doing a double mapping: one handled _auto-magically_ by the ORM that converts the retrieved SQL records into the Database Entity, and another, that converts the Database Entity into your domain class.
+
+Anyway, this can be the way to go if you feel the need to keep using ORMs. I used this approach sometimes, but I felt as if I were adding an abstraction of another abstraction. So, probably, an unneeded complexity.
 
 **In the worst-case scenario, you end up leaking all the database entities within the core domain, letting them become part of the domain logic and entangled with each other due to the database relations.**
 
@@ -110,9 +111,7 @@ Eventually, you will have to test the code. This entanglement of domain and tech
 
 The ORMs force you to map tables into objects, to use their custom language to interact with the database, and to define an object-oriented representation of the database tables. **Is this necessary? Is this useful? Is this really worth it?**
 
-We already have a great language for interacting with relational databases. It is called SQL.
-
-It's better to have **domain-aligned abstractions** and put the SQL queries in a Repository along with an _"intelligent"_ mapping to translate database entities to a domain object. This is due to the way we structure our domain objects that should not reflect the way we want to store the data, but the way we want the system behave.
+I think it's better to have **domain-aligned abstractions** and put the databse logic in a Repository along with an _"intelligent"_ mapping to translate database entities to a domain object. This is due to the way we structure our domain objects that should not reflect the way we want to store the data, but the way we want the system behave.
 
 <center>I prefer to keep the mapping logic very specific, clear, and as straightforward as possible.</center>
 
