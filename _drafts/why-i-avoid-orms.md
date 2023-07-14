@@ -65,9 +65,9 @@ interface EmployeeRepository: JpaRepository<Employee, Long> {
 #### What's wrong here?
 I see two main problems:
 1. **The Employee class should belong to the domain**. But it has the details of the database implementation and we shouldn't know where it comes from.
-   - has an id (also if I don't need it)
-   - is annotated as `@Entity`
-   - has other database-specific annotations on the fields
+   - it has an id (also if I don't need it)
+   - it is annotated as `@Entity`
+   - it has other database-specific annotations on the fields
    - the field names cannot be changed otherwise the query will not work since the entity reflects the db columns (you can add another annotation though)
 3. **The EmployeeRepository interface is not talking about the domain's language**:
    - it doesn't return a domain's object (Employee it's an ORM entity)
