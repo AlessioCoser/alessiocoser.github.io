@@ -13,7 +13,7 @@ Please <script type="IN/Share" data-url="{{site.url}}{{page.url}}"></script> **t
 
 Over the past few years I have been dealing with several ORMs, mainly on JVM-based platforms, especially Hibernate, but not only. I think they could be useful when you need to do simple CRUD operations with no business logic. However, I have rarely seen a simple CRUD service in the real world.
 
-<center>Converting tables and relations in objects and dependencies sounds very helpful at first, but it could be easily the wrong abstraction.</center>
+<center>Converting tables and relations in objects and dependencies sounds very helpful at first, but I think it could be easily the wrong abstraction.</center>
 
 ## Separation of concerns
 I usually separate the domain logic from the outside world adopting [hexagonal architecture](https://medium.com/ssense-tech/hexagonal-architecture-there-are-always-two-sides-to-every-story-bc0780ed7d9c) or [clean architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html).
