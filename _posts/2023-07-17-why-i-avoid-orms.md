@@ -4,7 +4,6 @@ title:  "Why I avoid ORMs"
 author: alessio
 categories: [ orm ]
 image: assets/images/avoid-orm.jpg
-published: false
 ---
 <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
 
