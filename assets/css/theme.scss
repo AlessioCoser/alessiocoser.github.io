@@ -306,7 +306,11 @@ span.post-name a,span.post-read-more a:hover {
 }
 .mainheading h1.posttitle {
 	font-weight:700;
+}
+.mainheading .reading-time {
+  margin-top:0.5rem;
 	margin-bottom:2rem;
+  color:#999;
 }
 .link-dark {
 	color:rgba(0,0,0,.8);
