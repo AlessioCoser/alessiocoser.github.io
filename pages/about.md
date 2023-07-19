@@ -2,7 +2,6 @@
 layout: page
 title: About me
 permalink: "/about-me/"
-image: assets/images/2.jpg
 ---
 
 I am a _software crafter_ and a passionate advocate of [eXtreme Programming](http://www.extremeprogramming.org/).
