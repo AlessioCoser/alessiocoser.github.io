@@ -7,16 +7,18 @@ image: assets/images/avoid-orm.jpg
 ---
 <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
 
-I will not bother you by expressing the advantages and disadvantages of the ORMs. There are plenty of articles out there. I just want to share my experience to clarify why I do not feel the need to use an ORM, why it could be harmful and, hopefully, to spark some constructive conversation and thoughts about it in the context of good software design.
+> **EDIT:** After some conversations I found out that my article can be mis-interpreted as avoid ORMs at all costs. So I updated the article to make it clearer that what I wrote, that is based on my experiences, is focused on a specific context: the context of clean or hexagonal architecture.
+
+I will not bother you by expressing the advantages and disadvantages of the ORMs. There are plenty of articles out there. I just want to share my experience to clarify why I do not feel the need to use an ORM, and, hopefully, to spark some constructive conversation and thoughts about it in the context of good software design.
 
 Please <script type="IN/Share" data-url="{{site.url}}{{page.url}}"></script> **this article on LinkedIn and tag me** if you want to start a public conversation on this topic or [**contact me**](/contact) if you prefer to talk about it privately.
 
-Over the past few years I have been dealing with several ORMs, mainly on JVM-based platforms, especially Hibernate, but not only. I think they could be useful when you need to do simple CRUD operations with no business logic. However, I have rarely seen a simple CRUD service in the real world.
+Over the past few years I have been dealing with several ORMs, mainly on JVM-based platforms, especially Hibernate, but not only.
 
 <center>Converting tables and relations in objects and dependencies sounds very helpful at first, but I think it could be easily the wrong abstraction.</center>
 
 ## Separation of concerns
-I usually separate the domain logic from the outside world adopting [hexagonal architecture](https://medium.com/ssense-tech/hexagonal-architecture-there-are-always-two-sides-to-every-story-bc0780ed7d9c) or [clean architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html).
+I usually need to separate the domain logic from the outside world adopting [hexagonal architecture](https://medium.com/ssense-tech/hexagonal-architecture-there-are-always-two-sides-to-every-story-bc0780ed7d9c) or [clean architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html).
 
 I will go into the details of these approaches in another post. For now, the important thing to note is that **my domain's code should not depend on the implementation detail of the external world** such as databases, APIs, external libraries, whatever is not my code. **It should depend on abstractions that express business behaviors**.
 
@@ -97,7 +99,7 @@ The implementation of EmployeeRepository will have all the things needed to sati
 
 In this case, you are doing a double mapping: one handled _auto-magically_ by the ORM that converts the retrieved SQL records into the Database Entity, and another, that converts the Database Entity into your domain class.
 
-Anyway, this can be the way to go if you feel the need to keep using ORMs. I used this approach sometimes, but I felt as if I were adding an abstraction of another abstraction. So, probably, an unneeded complexity.
+Anyway, **this can be the way to go** if you feel the need to keep using **ORMs**. I used this approach sometimes, but I felt as if I were adding an abstraction of another abstraction. So, probably, an unneeded complexity.
 
 **In the worst-case scenario, you end up leaking all the database entities within the core domain, letting them become part of the domain logic and entangled with each other due to the database relations.**
 
@@ -194,8 +196,11 @@ class MysqlEmployeeRepository(private val db: Database) : EmployeeRepository {
 ```
 
 ## Conclusions
+
+The JAKO library express only another apossible approach to the database communication. It is not suitable for production and it is not as feature-reach as many ORMs (hopefully with the contribution of other people will be).
+
 I think there are more effective ways to handle the database communication than the ORMs way. Thanks to the great Kotlin DSL you can do a lot of things keeping the sintax as similar as possible to SQL and still have a lot of help building SQL instructions.
 
-However, I think, and hope, that there are similar libraries out there for other languages as well. If they do not exist, well, they should.
+However, if you want to reimplement the database communication by hand, think about it twice. I know that there are similar and battle tested libraries out there for Kotlin and other languages as well. If they do not exist, well, they should.
 
 Please let me know what do you think :) <br /><script type="IN/Share" data-url="{{site.url}}{{page.url}}"></script> this article on LinkedIn and tag me if you find it interesting.
