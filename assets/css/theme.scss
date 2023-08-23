@@ -304,12 +304,18 @@ span.post-name a,span.post-read-more a:hover {
 	margin-left:3px;
 	margin-right:3px;
 }
+.mainheading {
+  margin-bottom: 2rem;
+}
 .mainheading h1.posttitle {
 	font-weight:700;
 }
 .mainheading .reading-time {
   margin-top:0.5rem;
-	margin-bottom:2rem;
+  color:#999;
+}
+.mainheading .post-date {
+  text-align: right;
   color:#999;
 }
 .link-dark {
