@@ -2,7 +2,7 @@
 layout: post
 title:  "Why I avoid ORMs"
 author: alessio
-categories: [ orm ]
+categories: [ orm, kotlin, jvm, hibernate ]
 image: assets/images/avoid-orm.jpg
 ---
 <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
