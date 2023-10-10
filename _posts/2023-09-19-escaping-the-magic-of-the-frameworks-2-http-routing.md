@@ -11,7 +11,7 @@ Most of the time, in a framework-based application, when I want to handle an HTT
 
 <center>Is the routes registration mechanism so complicate? Why do we want to hide it? What happens if we make it explicit?</center>
 
-In this series of articles I'm **replacing, magic by magic, some framework's features** until I have no more sorceries to wield. I'm doing it in **baby steps**, explaining the reasons why, and keeping **keeping my application working** all the time.
+In this series of articles I'm **replacing, magic by magic, some framework's features** until I have no more sorceries to wield. I'm doing it in **baby steps**, explaining the reasons why, and **keeping my application working** all the time.
 
 I know, what I'm doing is an **unconventional use of Spring Boot**, but I could have used any other framework. I chose this one because it's one of the most popular.
 
