@@ -35,7 +35,7 @@ In many teams I have seen the senior people orally handing down to the juniors t
 
 This is why, before choosing a **framework** or any of its **magical features**, we should think through the pros and cons and consider whether its use gives us a real benefit:
 - Does it really help me to do things in a cleaner way and save me a lot of boilerplate code?
-- Does a delayed feedback at compile time really help me?
+- Does a delayed feedback at run time really help me?
 - Do I have to reinvent the wheel if I don't use it or is it enough to use another simpler library?
 - Does it really help me reduce cognitive load or does it increase it?
 
